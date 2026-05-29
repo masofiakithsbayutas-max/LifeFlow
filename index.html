@@ -1,0 +1,163 @@
+export default function LifeFlowApp() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-black text-white p-6 font-sans"> <div className="max-w-7xl mx-auto"> {/* Header */} <header className="flex flex-col md:flex-row items-center justify-between mb-10 gap-4"> <div> <h1 className="text-5xl font-bold tracking-tight">LifeFlow</h1> <p className="text-slate-400 mt-2 text-lg"> Your AI-powered daily life assistant. </p> </div>
+
+<div className="flex gap-3">
+        <button className="px-5 py-3 rounded-2xl bg-white text-black font-semibold shadow-lg hover:scale-105 transition">
+          Get Started
+        </button>
+        <button className="px-5 py-3 rounded-2xl border border-slate-700 hover:bg-slate-800 transition">
+          Login
+        </button>
+      </div>
+    </header>
+
+    {/* Dashboard Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+      {/* Daily Overview */}
+      <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 shadow-2xl">
+        <h2 className="text-2xl font-semibold mb-4">Daily Overview</h2>
+
+        <div className="space-y-4">
+          <div className="bg-slate-900 rounded-2xl p-4">
+            <p className="text-slate-400">Today's Goal</p>
+            <h3 className="text-xl font-bold">Stay Productive</h3>
+          </div>
+
+          <div className="bg-slate-900 rounded-2xl p-4 flex items-center justify-between">
+            <div>
+              <p className="text-slate-400">Mood</p>
+              <h3 className="text-lg font-semibold">😊 Happy</h3>
+            </div>
+
+            <div className="text-4xl">☀️</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Task Manager */}
+      <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 shadow-2xl">
+        <h2 className="text-2xl font-semibold mb-4">Tasks</h2>
+
+        <div className="space-y-3">
+          <div className="flex items-center justify-between bg-slate-900 p-4 rounded-2xl">
+            <span>Finish Homework</span>
+            <input type="checkbox" className="w-5 h-5" />
+          </div>
+
+          <div className="flex items-center justify-between bg-slate-900 p-4 rounded-2xl">
+            <span>Drink Water</span>
+            <input type="checkbox" className="w-5 h-5" />
+          </div>
+
+          <div className="flex items-center justify-between bg-slate-900 p-4 rounded-2xl">
+            <span>Workout</span>
+            <input type="checkbox" className="w-5 h-5" />
+          </div>
+        </div>
+
+        <button className="mt-5 w-full bg-blue-600 hover:bg-blue-500 transition rounded-2xl py-3 font-semibold">
+          + Add Task
+        </button>
+      </div>
+
+      {/* Budget Tracker */}
+      <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 shadow-2xl">
+        <h2 className="text-2xl font-semibold mb-4">Budget</h2>
+
+        <div className="space-y-4">
+          <div className="bg-slate-900 p-4 rounded-2xl">
+            <p className="text-slate-400">Balance</p>
+            <h3 className="text-3xl font-bold">₱12,500</h3>
+          </div>
+
+          <div className="bg-slate-900 p-4 rounded-2xl">
+            <p className="text-slate-400">Savings Goal</p>
+            <div className="w-full bg-slate-700 rounded-full h-4 mt-3 overflow-hidden">
+              <div className="bg-green-500 h-4 w-2/3 rounded-full"></div>
+            </div>
+            <p className="mt-2 text-sm text-slate-400">67% completed</p>
+          </div>
+        </div>
+      </div>
+
+      {/* AI Assistant */}
+      <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 shadow-2xl">
+        <h2 className="text-2xl font-semibold mb-4">AI Assistant</h2>
+
+        <div className="bg-slate-900 rounded-2xl p-4 h-56 overflow-auto mb-4">
+          <div className="bg-blue-600 rounded-2xl p-3 mb-3 max-w-[80%]">
+            Plan my day
+          </div>
+
+          <div className="bg-slate-700 rounded-2xl p-3 max-w-[90%] ml-auto">
+            Focus on your homework first, drink water every 2 hours, and exercise for 30 minutes tonight.
+          </div>
+        </div>
+
+        <div className="flex gap-2">
+          <input
+            placeholder="Ask AI anything..."
+            className="flex-1 bg-slate-900 border border-slate-700 rounded-2xl px-4 py-3 outline-none"
+          />
+
+          <button className="bg-purple-600 hover:bg-purple-500 transition px-5 rounded-2xl font-semibold">
+            Send
+          </button>
+        </div>
+      </div>
+    </div>
+
+    {/* Extra Features */}
+    <section className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
+        <h3 className="text-2xl font-semibold mb-3">Health Tracker</h3>
+        <p className="text-slate-400 mb-5">
+          Track sleep, hydration, exercise, and healthy habits.
+        </p>
+
+        <div className="space-y-3">
+          <div className="bg-slate-900 p-4 rounded-2xl flex justify-between">
+            <span>Water Intake</span>
+            <span>5/8 Glasses</span>
+          </div>
+
+          <div className="bg-slate-900 p-4 rounded-2xl flex justify-between">
+            <span>Sleep</span>
+            <span>7h 20m</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
+        <h3 className="text-2xl font-semibold mb-3">Study Mode</h3>
+        <p className="text-slate-400 mb-5">
+          Homework planner, Pomodoro timer, and assignment tracking.
+        </p>
+
+        <div className="bg-slate-900 rounded-2xl p-5 text-center">
+          <div className="text-5xl font-bold mb-2">25:00</div>
+          <p className="text-slate-400">Focus Session</p>
+        </div>
+      </div>
+
+      <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
+        <h3 className="text-2xl font-semibold mb-3">Motivation</h3>
+        <p className="text-slate-400 mb-5">
+          Daily affirmations and mental wellness support.
+        </p>
+
+        <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-5">
+          <p className="text-lg font-medium italic">
+            “Small progress every day becomes big success.”
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* Footer */}
+    <footer className="mt-16 text-center text-slate-500 pb-10">
+      <p>LifeFlow © 2026 • Smart Daily Life Assistant</p>
+    </footer>
+  </div>
+</div>
+
+); }
